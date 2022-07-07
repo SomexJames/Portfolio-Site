@@ -1,3 +1,10 @@
+const main = {
+    name: "Brandon Kang",
+    description: "Student at The University of Texas at Dallas",
+    resume: ""
+};
+
+
 const projects = [
     {
         id: 1,
@@ -25,4 +32,4 @@ const about = [
     }
 ]
 
-export default { projects, about };
+export default { main, projects, about };
