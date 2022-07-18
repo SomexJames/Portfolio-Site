@@ -1,0 +1,13 @@
+#about {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.section__about {
+    position: relative;
+    display: grid;
+    overflow-y: scroll;
+    max-height: 61vh;
+}
+
