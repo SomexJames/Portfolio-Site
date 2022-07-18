@@ -1,0 +1,104 @@
+#contact {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.section__contact {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+    flex-direction: column;
+    max-height: 61vh;
+    overflow-y: scroll;
+}
+
+.contact__info {
+    margin-top: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__info > h4 {
+    color: var(--light-color);
+    font-size: 1.8rem;
+    letter-spacing: 0.2;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.contact__info > h5 {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 10px 0px;
+}
+
+.contact__info > p {
+    color: var(--light-color);
+    font-weight: 300;
+}
+
+.contact__resume {
+    display: flex;
+    color: var(--light-color);
+    font-weight: 300;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact__resume > a > svg {
+    width: 1.5em;
+}
+
+.contact__resume > a > p > span {
+    margin-left: -5px;
+    font-size: 0.85rem;
+    color: var(--blue);
+}
+
+.totop_arrow {
+    position: absolute;
+    bottom: 5vh;
+    transition: all ease-out 0.25s;
+}
+
+.totop_arrow > a > svg {
+    width: 3em;
+    color: var(--light-color);
+}
+
+.totop_arrow:hover {
+    transform: translateY(-10px);
+}
+
+@media (min-width: 768px) {
+    .contact__info {
+        margin-top: 20px;
+    }
+    input {
+        width: 344px;
+    }
+    .cc_row_1 {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1100px) {
+    .contact__info {
+        margin-top: 40px;
+    }
+    .section__contact {
+        flex-direction: row;
+        margin-top: 20px;
+    }
+    input {
+        width: 300px;
+    }
+    .cc_row_1 {
+        flex-direction: row;
+    }
+}
