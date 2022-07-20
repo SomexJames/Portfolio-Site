@@ -3,9 +3,12 @@ import "./PortfolioSection.css";
 import PortfolioContent from "../components/PortfolioContent";
 import projects from "../Info/Info";
 import { RiArrowDownSLine } from "react-icons/ri";
+import ScreenSize from "../Hooks/ScreenSize";
 
 
 const PortfolioSection = () => {
+    
+    const dimensions = ScreenSize();
 
     return(
         <section id="portfolio">

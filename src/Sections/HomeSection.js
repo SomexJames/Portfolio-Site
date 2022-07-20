@@ -3,9 +3,12 @@ import "./HomeSection.css";
 import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
 import { RiArrowDownSLine } from "react-icons/ri";
 import main from "../Info/Info";
+import ScreenSize from "../Hooks/ScreenSize";
 
 
 const HomeSection = () => {
+
+    const dimensions = ScreenSize();
 
     return(
         <section id="home">

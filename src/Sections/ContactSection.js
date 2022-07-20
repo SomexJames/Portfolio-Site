@@ -4,9 +4,12 @@ import ContactContent from "../components/ContactContent";
 import { TbArrowBarToUp } from "react-icons/tb";
 import { FaFileAlt } from "react-icons/fa";
 import main from "../Info/Info";
+import ScreenSize from "../Hooks/ScreenSize";
 
 
 const ContactSection = () => {
+
+    const dimensions = ScreenSize();
 
     return(
         <section id="contact">

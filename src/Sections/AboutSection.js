@@ -4,10 +4,12 @@ import AboutContent from "../components/AboutContent";
 import AboutSkills from "../components/AboutSkills";
 import about from "../Info/Info";
 import { RiArrowDownSLine } from "react-icons/ri";
+import ScreenSize from "../Hooks/ScreenSize";
 
 
 const AboutSection = () => {
 
+    const dimensions = ScreenSize();
 
     return(
         <section id="about">
