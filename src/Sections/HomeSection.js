@@ -10,6 +10,14 @@ const HomeSection = () => {
 
     const dimensions = ScreenSize();
 
+    var lineRepeat;
+
+    if (dimensions.width >= 768) {
+        lineRepeat = 50;
+    } else {
+        lineRepeat = 30;
+    }
+
     return(
         <section id="home">
             <div className="bg__image">
@@ -17,6 +25,7 @@ const HomeSection = () => {
                     <div className="home__content">
                         <div className="name">I am {main.main.name}.</div>
                         <div className="description">{main.main.description}</div>
+                        <div className="line">{"_".repeat(lineRepeat)}</div>
                         <div className="socials">
                             <div className="github">
                                 <a href="https://github.com/SomexJames" target="_blank"><FaGithub /></a>

@@ -11,11 +11,22 @@ const AboutSection = () => {
 
     const dimensions = ScreenSize();
 
+    var lineRepeat;
+
+    if (dimensions.width >= 1100) {
+        lineRepeat = 100;
+    } else if (dimensions.width >= 768) {
+        lineRepeat = 60;
+    } else {
+        lineRepeat = 30;
+    }
+
     return(
         <section id="about">
             <div className="section about">
                 <div className="heading">
                     <div className="section__title">About</div>
+                    <div className="line">{"_".repeat(lineRepeat)}</div>
                 </div>
                 <div className="section__about">
                     <div className="about__content">

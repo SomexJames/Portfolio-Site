@@ -11,11 +11,22 @@ const ContactSection = () => {
 
     const dimensions = ScreenSize();
 
+    var lineRepeat;
+
+    if (dimensions.width >= 1100) {
+        lineRepeat = 100;
+    } else if (dimensions.width >= 768) {
+        lineRepeat = 60;
+    } else {
+        lineRepeat = 30;
+    }
+
     return(
         <section id="contact">
             <div className="section contact">
                 <div className="heading">
                     <div className="section__title">Contact</div>
+                    <div className="line">{"_".repeat(lineRepeat)}</div>
                 </div>
                 <div className="section__contact">
                     <div className="contact__info">
