@@ -1,0 +1,33 @@
+.about__content {
+    display: flex;
+    color: var(--light-color);
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.about__title {
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.about__description {
+    font-weight: 300;
+}
+  
+@media (min-width: 1100px) {
+    .about__content {
+        flex-direction: row;
+    }
+
+    .about__title {
+        width: 35%;
+        padding: 24px 15px 24px 0px;
+    }
+
+    .about__description {
+        width: 65%;
+        padding: 0px 15px;
+    }
+}
