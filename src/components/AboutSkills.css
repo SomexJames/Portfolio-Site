@@ -1,0 +1,26 @@
+.about__skills {
+    font-weight: 300;
+    padding: 16px 0px;
+}
+
+.skill__icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill__item {
+    display: grid;
+    justify-items: center;
+    width: 80px;
+}
+
+.skill__item > svg {
+    width: 3em;
+}
+
+@media (min-width: 1100px) {
+    .about__skills {
+        width: 65%;
+    }
+}
