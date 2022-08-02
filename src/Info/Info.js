@@ -74,13 +74,13 @@ const projects = [
 const about = [
     {
         id: 1,
-        title: "",
-        description: ""
+        title: "Personal Executive Summary",
+        description: "My name is Brandon Kang and I am currently a student at the University of Texas at Dallas. I am pursuing a Masters in Financial Technology mainly because this was the closest I could get to technology given that I graduated with a business-orientated Bachelor's Degree. Technology/Programming is my passion because most of the things that turn programmers into good programmers are things that I consider fun and find value in."
     }, 
     {
         id: 2,
-        title: "",
-        description: ''
+        title: "Insight Into How I Think",
+        description: 'While doing everyday tasks, I tend to catch myself taking a step back and wondering "How can I optimize this?". Whether that may be washing the dishes more efficiently, finding the optimal pathing for vacuuming, or more recently, arranging my bathroom items in order to reduce the amount of conscious effort needed during my morning routine. (I use the term "tend to catch myself" because this is something that I rarely have to plan for, it just naturally comes up as a thought in my mind)'
     }
 ]
 
