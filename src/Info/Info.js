@@ -15,14 +15,59 @@ const main = {
 const projects = [
     {
         id: 1,
-        title: "",
-        description: ""
+        title: "Tesla Site Clone",
+        background: P1BG,
+        description: "A clone of Tesla's official website, Tesla.com.",
+        bullets: ["HTML5", "CSS3", "ReactJS", "Working Sidemenu", "Working Navbar", "Smooth Scrolling", "Up-to-date Impact Report", "Git Version Control"],
+        live: "https://somexjames.github.io/tesla-site-project",
+        github: "https://github.com/SomexJames/tesla-site-project",
+        presentation: false,
+        ext: ""
     },
     {
         id: 2,
-        title: "",
-        description: ""
-    }
+        title: "3x3 Monte Dapp",
+        background: P2BG,
+        description: "A ReactJS App that connects to an Ethereum test network using a custom ERC20-standard token as the game's in-game currency.",
+        bullets: ["ReactJS", "Solidity", "Decentralized App", "Connected to an Ethereum Test Network", "ERC20 Token", "HTML5", "CSS3", "Custom Hooks"],
+        live: "https://somexjames.github.io/3x3-monte-dapp/",
+        github: "https://github.com/SomexJames/3x3-monte-dapp",
+        presentation: false,
+        ext: ""
+    },
+    {
+        id: 3,
+        title: "BlackJack React",
+        background: P3BG,
+        description: "A functional ReactJS Webapp on the card game, BlackJack.",
+        bullets: ["HTML5", "CSS3", "ReactJS", "Custom Hooks and Game Logic", "Bridge Design Pattern", "Betting Feature", "Functional Components", "Hosted on Github Pages"],
+        live: "https://somexjames.github.io/BlackJackReact/",
+        github: "https://github.com/SomexJames/BlackJackReact",
+        presentation: false,
+        ext: ""
+    },
+    {
+        id: 4,
+        title: "Trading Strategy in R",
+        background: P4BG,
+        description: "Backtesting a stock option trading strategy in R.",
+        bullets: ["R", "Data Scraping", "Backtesting", "Stock Options", "Financial Mathematical Conversion Formulas", "Data Manipulation", "Technical Analysis Indicators"],
+        live: false,
+        github: "https://github.com/SomexJames/R_options_spread_strat",
+        presentation: false,
+        ext: ""
+    },
+    {
+        id: 5,
+        title: "Big Data Alpha Model",
+        background: P5BG,
+        description: "Big Data Alpha Model on various economic, technical, and sentiment factors to determine their significance in predicting future stock prices.",
+        bullets: ["R", "Data Scraping", "Sentiment Analysis", "Big Data", "Natural Language Processing", "Multiple Regression Model", "Technical Analysis Indicators", "Fundamental Macroeconomic Data", ],
+        live: false,
+        github: "https://github.com/SomexJames/BigDataAlphaModel",
+        presentation: "https://drive.google.com/file/d/1bntQV692MqeDa6wazA29zekWNKkf9WwM/view?usp=sharing",
+        ext: ""
+    }    
 ];
 
 
