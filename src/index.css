@@ -1,13 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-color: #0d0d0d;
+  --light-color: #fff;
+  --light-color-opac: rgba(255, 255, 255, 0.5);
+  --dark-gray: #222222;
+  --dark-gray-opac: #22222277;
+  --gray: #606060;
+  --light-gray: #aeaeae;
+  --light-gray-opac: #aeaeae5d;
+  --blue: #5356fa;
+}
+
+html {
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-color);
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+}
+
+button, a {
+  font-family: -apple-system, BlinkMacSystemFont, 'Ubuntu', sans-serif;
+  text-decoration: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.section {
+  width: 250px;
+  max-width: 1090px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 500px) {
+  .section {
+    width: 350px;
+  }
+  .popup-content {
+    width: 600px;
+  }
+}
+
+@media (min-width: 600px) {
+  .section {
+    width: 450px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    width: 720px;
+  }
+  .popup-content {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .section {
+      width: 1090px;
+  }
+  .popup-content {
+    width: 650px;
+    font-size: 1.1rem;
+  }
 }

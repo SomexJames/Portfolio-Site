@@ -1,0 +1,219 @@
+.portfolio__content {
+    display: flex;
+    z-index: 12;
+    position: relative;
+    min-height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+}
+
+.project__img {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: end;
+    gap: 35px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--light-gray);
+    transition: 0.5s ease;
+    box-shadow: var(--light-gray-opac) 2px 4px 4px 2px;
+}
+
+.portfolio__title {
+    opacity: 0;
+    justify-self: center;
+}
+
+.portfolio__title > p {
+    color: var(--light-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.view__project {
+    display: flex;
+    gap: 10px;
+    font-size: 0.8rem;
+    flex-direction: column;
+}
+
+.read__more, .view__demo {
+    opacity: 0;
+    background-color: var(--dark-gray);
+    border: 1px solid var(--light-gray-opac);
+    padding: 0.65rem 1rem;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+}
+
+.read__more > a, .view__demo > a {
+    color: var(--light-color);
+}
+
+.overlay:hover {
+    height: calc(100% - 30px);
+    width: calc(100% - 30px);
+    background-color: var(--dark-gray-opac);
+    box-shadow: none;
+}
+
+.overlay:hover > .portfolio__title {
+    animation: slideUp 0.5s ease forwards;
+}
+
+.overlay:hover > .view__project > .read__more, .overlay:hover > .view__project > .view__demo {
+    animation: fadeIn 0.5s ease forwards, slideUp 0.5s ease forwards;
+    animation-delay: 0.25s;
+}
+
+/* Popup CSS */
+
+    .popup-overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .popup-content {
+        padding: 5px;
+        background-color: rgb(220, 220, 220);
+        max-width: 80%;
+        border-radius: 10px;
+        border: 1px solid var(--dark-gray-opac);
+
+        animation: popIn 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+    }
+
+    .modal {
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        min-height: 300px;
+    }
+
+    .modal > .header {
+        border-bottom: 1px solid gray;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 10px;
+        margin: 0px 10px;
+    }
+
+    .modal > .content {
+        padding: 10px;
+    }
+
+    .modal > .actions {
+        display: flex;
+        margin-top: auto;
+        padding: 10px 5px;
+        text-align: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .actions > a {
+        background-color: var(--primary-color);
+        color: var(--light-color);
+        border: 2px solid var(--light-color);
+        cursor: pointer;
+        padding: 4px 10px;
+        font-weight: 300;
+        transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    }
+
+    .actions > a:hover {
+        background-color: var(--light-color);
+        color: var(--primary-color);
+    }
+
+    .modal > .close {
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        padding: 2px 5px;
+        line-height: 20px;
+        right: -10px;
+        top: -10px;
+        font-size: 24px;
+        background-color: var(--primary-color);
+        color: var(--light-color);
+        border-radius: 18px;
+        border: 1px solid #cfcece;
+        transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    }
+
+    .modal > .close:hover {
+        background-color: var(--light-color);
+        color: var(--primary-color);
+    }
+
+    .bullet__points {
+        padding: 10px;
+        overflow-y: scroll;
+    }
+
+    .bullet__points > li {
+        margin-bottom: 10px;
+    }
+
+@media (max-width: 350px) {
+    .modal > .actions {
+        flex-direction: column;
+        align-self: center;
+        width: 100px;
+    }
+}
+
+@media (min-width: 500px) {
+    .overlay {
+        gap: 70px
+    }
+    .view__project {
+        flex-direction: row;
+    }
+}
+
+@keyframes popIn {
+    0% {
+      transform: scale(1) translateY(0px);
+      opacity: 0;
+    }
+    1% {
+      transform: scale(0.96) translateY(10px);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) translateY(0px);
+      opacity: 1;
+      box-shadow: var(--dark-gray) 0px 2px 4px, var(--light-gray) 0px 2px 4px 1px, var(--light-gray) 0px -3px 0px inset;
+    }
+  }
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-25px);
+    }
+  }
+  

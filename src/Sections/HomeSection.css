@@ -1,0 +1,120 @@
+.bg__image::before {
+    content: "";
+    position: absolute;
+    background-image: url(../assets/macbook-keyboard.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    filter: saturate(0.4) brightness(0.4);
+}
+
+.section__home {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9;
+    justify-content: center;
+}
+
+.home__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    padding-top: 10rem;
+    max-width: 80%;
+    text-align: center;
+}
+
+.name {
+    color: var(--light-color);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.7s ease forwards, slideup 0.7s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.description {
+    color: var(--light-color);
+    font-weight: 300;
+    opacity: 0.9;
+    font-size: 0.8rem;
+    max-width: 70%;
+}
+
+.line {
+    color: var(--light-color);
+    padding-bottom: 1rem;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.description, .line, .socials {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards, slideup 1s ease forwards;
+    animation-delay: 1s;
+}
+
+svg {
+    fill: var(--light-color);
+    width: 1.75rem;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .home__content {
+        padding-top: 200px;
+    }
+
+    .name {
+        font-size: 3rem
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .home__content {
+        padding-top: 200px;
+    }
+
+    .name {
+        font-size: 3rem
+    }
+
+    .description {
+        font-size: 1rem;
+        max-width: 80%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideup {
+    0% {
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
