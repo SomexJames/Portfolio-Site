@@ -7,8 +7,8 @@ import P5BG from "../assets/p5bg.png";
 
 const main = {
     name: "Brandon Kang",
-    description: "Student at The University of Texas at Dallas",
-    resume: "https://drive.google.com/drive/folders/1EA8Q90x39-hhLDh8QMd3e0qZAhSI2iY3?usp=sharing"
+    description: "Aspiring Software Engineer",
+    resume: "https://docs.google.com/document/d/1VWDFuo3TWuIZmK0-dJ3K9xT2SkkCVS_JeFEF2vMwFC4/edit?usp=drivesdk"
 };
 
 
