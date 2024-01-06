@@ -1,7 +1,17 @@
 #about {
     display: flex;
     position: relative;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.about__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
 }
 
 .section__about {

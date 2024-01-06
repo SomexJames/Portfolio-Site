@@ -23,31 +23,33 @@ const AboutSection = () => {
 
     return(
         <section id="about">
-            <div className="section about">
-                <div className="heading">
-                    <div className="section__title">About</div>
-                    <div className="line">{"_".repeat(lineRepeat)}</div>
-                </div>
-                <div className="section__about">
-                    <div className="about__content">
-                        <div className="about__title">Skills</div>
-                        <div className="about__skills">
-                            <AboutSkills />
-                        </div>
+            <div className="about__container">
+                <div className="section about">
+                    <div className="heading">
+                        <div className="section__title">About</div>
+                        <div className="line">{"_".repeat(lineRepeat)}</div>
                     </div>
-                    {
-                        about.about.map((abt) =>
-                            <AboutContent
-                                id={abt.id}
-                                title={abt.title}
-                                description={abt.description}
-                            />
-                        )
-                    }
+                    <div className="section__about">
+                        <div className="about__content">
+                            <div className="about__title">Skills</div>
+                            <div className="about__skills">
+                                <AboutSkills />
+                            </div>
+                        </div>
+                        {
+                            about.about.map((abt) =>
+                                <AboutContent
+                                    id={abt.id}
+                                    title={abt.title}
+                                    description={abt.description}
+                                />
+                            )
+                        }
+                    </div>
                 </div>
-            </div>
-            <div className="navArrow">
-                <a href="#contact"><RiArrowDownSLine /></a>
+                <div className="navArrow">
+                    <a href="#contact"><RiArrowDownSLine /></a>
+                </div>
             </div>
         </section>
     )
