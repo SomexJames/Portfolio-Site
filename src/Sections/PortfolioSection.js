@@ -22,23 +22,25 @@ const PortfolioSection = () => {
 
     return(
         <section id="portfolio">
-            <div className="section portfolio">
-                <div className="heading">
-                    <div className="section__title">Portfolio</div>
-                    <div className="line">{"_".repeat(lineRepeat)}</div>
+            <div className="portfolio__container">
+                <div className="section portfolio">
+                    <div className="heading">
+                        <div className="section__title">Portfolio</div>
+                        <div className="line">{"_".repeat(lineRepeat)}</div>
+                    </div>
+                    <div className="section__portfolio">
+                        {
+                            projects.projects.map((proj) =>
+                                <PortfolioContent
+                                    proj={proj}
+                                />
+                            )
+                        }
+                    </div>
                 </div>
-                <div className="section__portfolio">
-                    {
-                        projects.projects.map((proj) =>
-                            <PortfolioContent
-                                proj={proj}
-                            />
-                        )
-                    }
+                <div className="navArrow">
+                    <a href="#about"><RiArrowDownSLine /></a>
                 </div>
-            </div>
-            <div className="navArrow">
-                <a href="#about"><RiArrowDownSLine /></a>
             </div>
         </section>
     )

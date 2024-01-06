@@ -1,7 +1,17 @@
 #portfolio {
     display: flex;
     position: relative;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.portfolio__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
 }
 
 .section__portfolio {
