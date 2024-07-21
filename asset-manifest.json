@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.6b126f05.css",
+    "main.css": "/static/css/main.d34c5ba6.css",
     "main.js": "/static/js/main.50c2ade1.js",
     "static/media/p1bg.png": "/static/media/p1bg.c390ab20677736b4393c.png",
     "static/media/macbook-keyboard.jpg": "/static/media/macbook-keyboard.08f94fd59923e5e7252b.jpg",
@@ -10,11 +10,11 @@
     "static/media/KANG_LOGO.png": "/static/media/KANG_LOGO.061c44847bf822ba92f6.png",
     "static/media/p3bg.png": "/static/media/p3bg.df48238720d4ea11b5fb.png",
     "index.html": "/index.html",
-    "main.6b126f05.css.map": "/static/css/main.6b126f05.css.map",
+    "main.d34c5ba6.css.map": "/static/css/main.d34c5ba6.css.map",
     "main.50c2ade1.js.map": "/static/js/main.50c2ade1.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b126f05.css",
+    "static/css/main.d34c5ba6.css",
     "static/js/main.50c2ade1.js"
   ]
 }
