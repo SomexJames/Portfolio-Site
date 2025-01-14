@@ -10,6 +10,9 @@
   --light-gray: #aeaeae;
   --light-gray-opac: #aeaeae5d;
   --blue: #5356fa;
+  --accent: #39f2a3;
+  --accent-soft: rgba(57, 242, 163, 0.2);
+  --accent-strong: rgba(57, 242, 163, 0.55);
 }
 
 html {
@@ -38,6 +41,75 @@ section {
 button, a {
   font-family: -apple-system, BlinkMacSystemFont, 'Ubuntu', sans-serif;
   text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+.pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--light-gray-opac);
+  color: var(--light-color);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.3s ease;
+}
+
+.pill-button:hover,
+.pill-button:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 15px 30px rgba(57, 242, 163, 0.18);
+}
+
+.pill-button--solid {
+  background: linear-gradient(135deg, rgba(57, 242, 163, 0.3), rgba(57, 242, 163, 0.05));
+}
+
+.icon-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--light-gray-opac);
+  background: rgba(13, 13, 13, 0.6);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.3s ease;
+}
+
+.icon-button svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.icon-button:hover,
+.icon-button:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  background: rgba(57, 242, 163, 0.08);
+  box-shadow: 0 18px 30px rgba(57, 242, 163, 0.2);
+}
+
+.icon-button--ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+}
+
+.icon-button--ghost:hover,
+.icon-button--ghost:focus-visible {
+  background: rgba(57, 242, 163, 0.12);
 }
 
 code {

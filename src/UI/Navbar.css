@@ -49,16 +49,38 @@
     gap: 2rem;
 }
 
-.navbar__right > a {
+.nav-link {
     font-weight: 400;
     color: var(--light-color);
     letter-spacing: 0.05rem;
     opacity: 90%;
-    transition: box-shadow .33s cubic-bezier(0.5,0,0,0.75);
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-.navbar__right > a:hover {
-    box-shadow: 0 2px 0 0 var(--light-color);
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0%;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    color: var(--light-color);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+    width: 100%;
+}
+
+.logo-link::after {
+    display: none;
 }
 
 @media (min-width: 768px) {

@@ -25,13 +25,13 @@ const Navbar = () => {
     return(
         <div className={`navbar-${scrollState}`}>
             <div className="navbar__name">
-                <a href="#home"><img src={KangLogo}></img></a>
+                <a href="#home" className="nav-link logo-link"><img src={KangLogo} alt="Kang logo"></img></a>
             </div>
             <div className="navbar__right">
-                <a href="#home">Home</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a className="nav-link" href="#home">Home</a>
+                <a className="nav-link" href="#portfolio">Portfolio</a>
+                <a className="nav-link" href="#about">About</a>
+                <a className="nav-link" href="#contact">Contact</a>
             </div>
         </div>
     )

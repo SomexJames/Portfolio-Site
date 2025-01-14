@@ -52,7 +52,7 @@
 }
 
 .contact__resume > a > svg {
-    width: 1.5em;
+    width: 1.4em;
 }
 
 .contact__resume > a > p > span {
@@ -68,7 +68,7 @@
 }
 
 .totop_arrow > a > svg {
-    width: 3em;
+    width: 1.8em;
     color: var(--light-color);
 }
 

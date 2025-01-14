@@ -29,18 +29,18 @@ const HomeSection = () => {
                             <div className="line">{"_".repeat(lineRepeat)}</div>
                             <div className="socials">
                                 <div className="github">
-                                    <a href="https://github.com/SomexJames" target="_blank"><FaGithub /></a>
+                                    <a className="icon-button" href="https://github.com/SomexJames" target="_blank" rel="noreferrer"><FaGithub /></a>
                                 </div>
                                 <div className="linkedin">
-                                    <a href="https://www.linkedin.com/in/bjkang17/" target="_blank"><FaLinkedin /></a>
+                                    <a className="icon-button" href="https://www.linkedin.com/in/bjkang17/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
                                 </div>
                                 <div className="filealt">
-                                    <a href={main.main.resume} target="_blank"><FaFileAlt /></a>
+                                    <a className="icon-button" href={main.main.resume} target="_blank" rel="noreferrer"><FaFileAlt /></a>
                                 </div>
                             </div>
                         </div>
                         <div className="navArrow">
-                            <a href="#portfolio"><RiArrowDownSLine /></a>
+                            <a className="icon-button icon-button--ghost" href="#portfolio"><RiArrowDownSLine /></a>
                         </div>
                     </div>
                 </div>

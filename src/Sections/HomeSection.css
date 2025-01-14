@@ -1,13 +1,30 @@
+.bg__image {
+    position: relative;
+    overflow: hidden;
+}
+
 .bg__image::before {
     content: "";
     position: absolute;
+    inset: 0;
     background-image: url(../assets/macbook-keyboard.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
     filter: saturate(0.4) brightness(0.4);
+}
+
+.bg__image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 75% 20%, rgba(57, 242, 163, 0.18), transparent 45%),
+        radial-gradient(circle at 20% 70%, rgba(83, 86, 250, 0.25), transparent 45%),
+        linear-gradient(120deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.2));
+    mix-blend-mode: screen;
+    pointer-events: none;
+    animation: glowShift 10s ease-in-out infinite;
 }
 
 .section__home {
@@ -38,6 +55,12 @@
     justify-self: center;
     max-width: 80%;
     text-align: center;
+    padding: 1.5rem;
+    border-radius: 24px;
+    backdrop-filter: blur(6px);
+    background: rgba(13, 13, 13, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
 }
 
 .name {
@@ -67,6 +90,7 @@
 .socials {
     display: flex;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .description, .line, .socials {
@@ -76,10 +100,18 @@
     animation-delay: 1s;
 }
 
-svg {
+.socials svg,
+.navArrow svg {
     fill: var(--light-color);
-    width: 1.75rem;
     height: auto;
+}
+
+.navArrow svg {
+    width: 2rem;
+}
+
+.socials svg {
+    width: 1.4rem;
 }
 
 @media (min-width: 768px) {
@@ -111,6 +143,18 @@ svg {
       opacity: 1;
     }
   }
+
+@keyframes glowShift {
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.05);
+    }
+}
   
   @keyframes slideup {
     0% {

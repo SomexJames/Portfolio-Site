@@ -10,8 +10,8 @@
 }
 
 input {
-    background-color: transparent;
-    border: 1px solid var(--light-color);
+    background-color: rgba(13, 13, 13, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     outline: none;
     color: var(--light-color);
     line-height: 1.25;
@@ -23,9 +23,15 @@ input {
     font-weight: 300;
 }
 
+input:focus,
+textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(57, 242, 163, 0.15);
+}
+
 textarea {
-    background-color: transparent;
-    border: 1px solid var(--light-color);
+    background-color: rgba(13, 13, 13, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     outline: none;
     color: var(--light-color);
     margin-top: 40px;
@@ -39,27 +45,15 @@ textarea {
     resize: vertical;
 }
 
-.cc_row_3 > input {
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    border: 2px solid var(--light-color);
-    cursor: pointer;
-    padding: 4px 20px;
-    font-weight: 300;
+.submit_button {
     font-size: 1.1rem;
-    transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-    width: auto;
+    font-weight: 300;
     margin-top: 30px;
 }
 
-.cc_row_3 > input:hover {
-    background-color: var(--light-color);
-    color: var(--primary-color);
-}
-
 .submit-popup-content {
-    background-color: var(--primary-color);
-    border: 1px solid var(--light-color);
+    background-color: rgba(13, 13, 13, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--light-color);
     line-height: 1.25;
     padding: 15px 30px;

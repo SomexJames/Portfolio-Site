@@ -48,7 +48,7 @@ const AboutSection = () => {
                     </div>
                 </div>
                 <div className="navArrow">
-                    <a href="#contact"><RiArrowDownSLine /></a>
+                    <a className="icon-button icon-button--ghost" href="#contact"><RiArrowDownSLine /></a>
                 </div>
             </div>
         </section>

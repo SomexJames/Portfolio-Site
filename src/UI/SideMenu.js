@@ -25,20 +25,20 @@ const SideMenu = () => {
 
     return (
         <>
-            <button type="button" style={style} className="sidemenu__button" onClick={() => setOpen(o => !o)}>
+            <button type="button" style={style} className="sidemenu__button icon-button icon-button--ghost" onClick={() => setOpen(o => !o)} aria-label="Open menu">
                 <GiHamburgerMenu />
             </button>
             <div className="sidemenu">
                 <Popup className="sidemenu-popup" open={open} closeOnDocumentClick onClose={closeModal}>
                     <div className="modal">
-                        <a className="sidemenu__close" onClick={closeModal}>
+                        <button type="button" className="sidemenu__close icon-button icon-button--ghost" onClick={closeModal} aria-label="Close menu">
                             <FaTimes />
-                        </a>
+                        </button>
                         <div className='sideMenu__content' onClick={() => setOpen(o => !o)}>
-                            <a href="#home">Home</a>
-                            <a href="#portfolio">Portfolio</a>
-                            <a href="#about">About</a>
-                            <a href="#contact">Contact</a>
+                            <a className="nav-link nav-link--stack" href="#home">Home</a>
+                            <a className="nav-link nav-link--stack" href="#portfolio">Portfolio</a>
+                            <a className="nav-link nav-link--stack" href="#about">About</a>
+                            <a className="nav-link nav-link--stack" href="#contact">Contact</a>
                         </div>
                     </div>
                 </Popup>

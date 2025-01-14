@@ -33,8 +33,10 @@ const PortfolioContent = (proj) => {
             <div className="overlay">
                 <div className="portfolio__title"><p>{proj.proj.title}</p></div>
                 <div className="view__project">
-                    <div className="view__demo" style={showLive}><a href={proj.proj.live} target="_blank">View Demo</a></div>
-                    <Popup trigger={<div className="read__more"><a>Read More</a></div>} modal aria-labelledby aria-describedby>
+                    <div className="view__demo" style={showLive}>
+                        <a className="pill-button" href={proj.proj.live} target="_blank" rel="noreferrer">View Demo</a>
+                    </div>
+                    <Popup trigger={<button type="button" className="pill-button pill-button--solid read__more">Read More</button>} modal aria-labelledby aria-describedby>
                         {close => (
                             <div className="modal">
                                 <button className="close" onClick={close}>
@@ -44,10 +46,10 @@ const PortfolioContent = (proj) => {
                                 <div className="content">{proj.proj.description}</div>
                                 <div className="bullet__points">{proj.proj.bullets.map(bul => <li>{bul}</li>)}</div>
                                 <div className="actions">
-                                    <a style={showLive} href={proj.proj.live} target="_blank">Live Demo</a>
-                                    <a style={showRep} href={proj.proj.presentation} target="_blank">Full Report (PDF)</a>
-                                    <a href={proj.proj.github} target="_blank">Github</a>
-                                    <a onClick={() => {close();}}>Back</a>
+                                    <a className="pill-button" style={showLive} href={proj.proj.live} target="_blank" rel="noreferrer">Live Demo</a>
+                                    <a className="pill-button" style={showRep} href={proj.proj.presentation} target="_blank" rel="noreferrer">Full Report (PDF)</a>
+                                    <a className="pill-button" href={proj.proj.github} target="_blank" rel="noreferrer">Github</a>
+                                    <button type="button" className="pill-button" onClick={() => {close();}}>Back</button>
                                 </div>
                             </div>
                         )}

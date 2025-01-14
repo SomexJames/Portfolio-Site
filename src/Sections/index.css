@@ -24,6 +24,7 @@
     animation: fadeDown 1s ease forwards;
     animation-delay: 1s;
     opacity: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .navArrow > a > svg {

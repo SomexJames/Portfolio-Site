@@ -39,7 +39,7 @@ const PortfolioSection = () => {
                     </div>
                 </div>
                 <div className="navArrow">
-                    <a href="#about"><RiArrowDownSLine /></a>
+                    <a className="icon-button icon-button--ghost" href="#about"><RiArrowDownSLine /></a>
                 </div>
             </div>
         </section>

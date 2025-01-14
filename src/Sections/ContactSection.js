@@ -36,15 +36,15 @@ const ContactSection = () => {
                         <p><strong>School: </strong>bjk170530@utdallas.edu</p>
                         <div className="contact__resume">
                             <p><strong>Resume: </strong></p>
-                            <a href={main.main.resume} target="_blank"><FaFileAlt /></a>
-                            <a href={main.main.resume} target="_blank"><p><span>(Google Drive link)</span></p></a>
+                            <a className="icon-button" href={main.main.resume} target="_blank" rel="noreferrer"><FaFileAlt /></a>
+                            <a href={main.main.resume} target="_blank" rel="noreferrer"><p><span>(Google Drive link)</span></p></a>
                         </div>
                     </div>
                     <ContactContent />
                 </div>
             </div>
             <div className="totop_arrow">
-                <a href="#home"><TbArrowBarToUp /></a>
+                <a className="icon-button icon-button--ghost" href="#home"><TbArrowBarToUp /></a>
             </div>
         </section>
     )
