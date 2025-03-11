@@ -1,36 +1,79 @@
-.index {
-    position: absolute;
-    overflow-y: scroll;
+.section__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+    min-height: 100%;
+    padding: var(--section-top-offset) 0 var(--section-bottom-offset);
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .section__title {
     color: var(--light-color);
     position: relative;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: var(--font-size-5xl);
     letter-spacing: 0.75px;
+    margin: 0;
 }
 
 .heading {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    grid-row: 1;
+    justify-self: center;
 }
 
 .navArrow {
     position: relative;
-    margin-bottom: 2rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    z-index: 10;
 }
 
-.navArrow > a {
-    animation: fadeDown 1s ease forwards;
-    animation-delay: 1s;
-    opacity: 0;
+.navArrow__button {
+    min-width: 64px;
+    height: 44px;
+    padding: 0;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.navArrow > a > svg {
-    width: 3em;
+.navArrow__button svg {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.navArrow,
+.navArrow__button {
+    animation: fadeDown 1s ease forwards;
+    animation-delay: 1s;
     animation: bounceDown infinite 1.75s;
     animation-delay: 2s;
+}
+
+.navArrow__button:hover,
+.navArrow__button:focus-visible {
+    transform: translateY(-4px);
+}
+
+@media (min-width: 768px) {
+    .section__title {
+        font-size: var(--font-size-6xl);
+    }
+}
+
+@media (min-width: 1100px) {
+    .section__title {
+        font-size: var(--font-size-7xl);
+    }
 }
 
 @keyframes fadeDown {
@@ -41,7 +84,7 @@
       transform: translateY(0);
     }
 }
-    
+
 @keyframes bounceDown {
     0%,
     20%,
@@ -55,17 +98,5 @@
     }
     65% {
       transform: translateY(3px);
-    }
-}
-
-@media (min-width: 768px) {
-    .section__title {
-        font-size: 2.5rem;
-    }
-}
-
-@media (min-width: 1100px) {
-    .section__title {
-        font-size: 3rem;
     }
 }

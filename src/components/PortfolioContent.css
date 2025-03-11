@@ -29,9 +29,9 @@
     height: 100%;
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    transition: 0.5s ease;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(180deg, rgba(13, 13, 13, 0.1), rgba(13, 13, 13, 0.6));
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(160deg, rgba(13, 13, 13, 0.15), rgba(13, 13, 13, 0.7));
 }
 
 .portfolio__title {
@@ -39,16 +39,17 @@
     justify-self: center;
 }
 
-.portfolio__title > p {
+.portfolio__title > h3 {
     color: var(--light-color);
-    font-size: 1.2rem;
+    font-size: var(--font-size-xl);
     font-weight: 400;
+    margin: 0;
 }
 
 .view__project {
     display: flex;
     gap: 10px;
-    font-size: 0.8rem;
+    font-size: var(--font-size-xs);
     flex-direction: column;
 }
 
@@ -62,10 +63,11 @@
 }
 
 .overlay:hover {
-    height: calc(100% - 30px);
-    width: calc(100% - 30px);
-    background-color: rgba(13, 13, 13, 0.65);
-    box-shadow: none;
+    height: calc(100% - 24px);
+    width: calc(100% - 24px);
+    background: linear-gradient(160deg, rgba(13, 13, 13, 0.45), rgba(13, 13, 13, 0.85));
+    border-color: var(--accent);
+    box-shadow: 0 18px 35px rgba(57, 242, 163, 0.18);
 }
 
 .portfolio__content:hover {
@@ -90,38 +92,44 @@
 
     .popup-content {
         padding: 5px;
-        background-color: rgba(13, 13, 13, 0.95);
+        background: linear-gradient(160deg, rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.95));
         max-width: 80%;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(10px);
 
         animation: popIn 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
     }
 
     .modal {
         display: flex;
+        position: relative;
         flex-direction: column;
-        height: 50vh;
+        height: auto;
         min-height: 300px;
+        max-height: 70vh;
         color: var(--light-color);
     }
 
     .modal > .header {
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        font-size: 1.5rem;
+        font-size: var(--font-size-3xl);
         text-align: center;
-        padding: 10px;
+        padding: 14px 10px;
         margin: 0px 10px;
+        letter-spacing: 0.4px;
     }
 
     .modal > .content {
-        padding: 10px;
+        padding: 12px 14px;
+        margin: 0;
     }
 
     .modal > .actions {
         display: flex;
         margin-top: auto;
-        padding: 10px 5px;
+        padding: 12px 10px 16px;
         text-align: center;
         justify-content: center;
         gap: 10px;
@@ -139,30 +147,37 @@
         cursor: pointer;
         position: absolute;
         display: block;
-        padding: 2px 5px;
+        padding: 6px 9px;
         line-height: 20px;
-        right: -10px;
-        top: -10px;
-        font-size: 24px;
-        background-color: var(--primary-color);
+        right: 12px;
+        top: 12px;
+        font-size: var(--font-size-3xl);
+        background: rgba(13, 13, 13, 0.7);
         color: var(--light-color);
-        border-radius: 18px;
-        border: 1px solid #cfcece;
-        transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
     }
 
     .modal > .close:hover {
-        background-color: var(--light-color);
-        color: var(--primary-color);
+        background: rgba(57, 242, 163, 0.2);
+        color: var(--light-color);
+        border-color: var(--accent);
     }
 
     .bullet__points {
-        padding: 10px;
-        overflow-y: scroll;
+        padding: 10px 10px 10px 24px;
+        overflow-y: auto;
+        margin: 0;
+        list-style: disc;
     }
 
     .bullet__points > li {
         margin-bottom: 10px;
+    }
+
+    .bullet__points > li > p {
+        margin: 0;
     }
 
 @media (max-width: 350px) {

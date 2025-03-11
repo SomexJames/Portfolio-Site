@@ -1,52 +1,31 @@
-#portfolio {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 90vh;
-}
-
-.portfolio__container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 90%;
-}
-
 .section__portfolio {
     display: grid;
     position: relative;
+    align-content: start;
     gap: 20px;
     padding: 15px 10px;
-    grid-template-columns: 250px;
+    width: 80%;
+    box-sizing: border-box;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto;
-    align-self: center;
-    overflow: scroll;
     overflow-x: hidden;
-    max-height: 61vh;
-}
-
-.portfolio > .line {
-    opacity: 0.9;
 }
 
 @media (min-width: 500px) {
     .section__portfolio {
-        grid-template-columns: 350px;
+        grid-template-columns: minmax(0, 350px);
     }
 }
 
 @media (min-width: 768px) {
     .section__portfolio {
-        grid-template-columns: 350px 350px;
+        grid-template-columns: repeat(2, minmax(0, 350px));
     }
 }
 
 @media (min-width: 1100px) {
     .section__portfolio {
-        grid-template-columns: 350px 350px 350px;
+        grid-template-columns: repeat(3, minmax(0, 350px));
         grid-template-rows: 260px;
     }
 }

@@ -31,25 +31,25 @@ const PortfolioContent = (proj) => {
     return(
         <div className="portfolio__content" style={style} id={proj.proj.id}>
             <div className="overlay">
-                <div className="portfolio__title"><p>{proj.proj.title}</p></div>
+                <div className="portfolio__title"><h3>{proj.proj.title}</h3></div>
                 <div className="view__project">
                     <div className="view__demo" style={showLive}>
-                        <a className="pill-button" href={proj.proj.live} target="_blank" rel="noreferrer">View Demo</a>
+                        <a className="pill-button" href={proj.proj.live} target="_blank" rel="noreferrer"><p>View Demo</p></a>
                     </div>
-                    <Popup trigger={<button type="button" className="pill-button pill-button--solid read__more">Read More</button>} modal aria-labelledby aria-describedby>
+                    <Popup trigger={<button type="button" className="pill-button pill-button--solid read__more"><p>Read More</p></button>} modal aria-labelledby aria-describedby>
                         {close => (
                             <div className="modal">
                                 <button className="close" onClick={close}>
-                                &times;
+                                    <p aria-hidden="true">&times;</p>
                                 </button>
-                                <div className="header">{proj.proj.title}</div>
-                                <div className="content">{proj.proj.description}</div>
-                                <div className="bullet__points">{proj.proj.bullets.map(bul => <li>{bul}</li>)}</div>
+                                <h3 className="header">{proj.proj.title}</h3>
+                                <p className="content">{proj.proj.description}</p>
+                                <ul className="bullet__points">{proj.proj.bullets.map(bul => <li><p>{bul}</p></li>)}</ul>
                                 <div className="actions">
-                                    <a className="pill-button" style={showLive} href={proj.proj.live} target="_blank" rel="noreferrer">Live Demo</a>
-                                    <a className="pill-button" style={showRep} href={proj.proj.presentation} target="_blank" rel="noreferrer">Full Report (PDF)</a>
-                                    <a className="pill-button" href={proj.proj.github} target="_blank" rel="noreferrer">Github</a>
-                                    <button type="button" className="pill-button" onClick={() => {close();}}>Back</button>
+                                    <a className="pill-button" style={showLive} href={proj.proj.live} target="_blank" rel="noreferrer"><p>Live Demo</p></a>
+                                    <a className="pill-button" style={showRep} href={proj.proj.presentation} target="_blank" rel="noreferrer"><p>Full Report (PDF)</p></a>
+                                    <a className="pill-button" href={proj.proj.github} target="_blank" rel="noreferrer"><p>Github</p></a>
+                                    <button type="button" className="pill-button" onClick={() => {close();}}><p>Back</p></button>
                                 </div>
                             </div>
                         )}

@@ -37,7 +37,7 @@ const ContactContent = () => {
                     <textarea className="msg_input" placeholder="Message" name="message"></textarea>
                 </div>
                 <div className="cc_row_3">
-                    <button type="submit" className="pill-button submit_button">Send</button>
+                    <button type="submit" className="pill-button submit_button"><p>Send</p></button>
                 </div>
                 <Popup className="submit-popup" open={open} closeOnDocumentClick onClose={closeModal}>
                     <button type="button" className="submit__close icon-button icon-button--ghost" onClick={closeModal} aria-label="Close message">

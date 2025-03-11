@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
 import { RiArrowDownSLine } from "react-icons/ri";
 import main from "../Info/Info";
 import ScreenSize from "../Hooks/ScreenSize";
+import { smoothScrollTo } from "../utils/smoothScroll";
 
 
 const HomeSection = () => {
@@ -18,15 +19,22 @@ const HomeSection = () => {
         lineRepeat = 30;
     }
 
+    const handleNavClick = (event, targetId) => {
+        event.preventDefault();
+        smoothScrollTo(targetId);
+    };
+
     return(
         <section id="home">
-            <div className="bg__image">
-                <div className="section__home">
+            <div className="bg__image" aria-hidden="true"></div>
+            <div className="section__container">
+                <div className="heading section-frame"></div>
+                <div className="section__home section__scroll">
                     <div className="home__container">
                         <div className="home__content">
-                            <div className="name">I am {main.main.name}.</div>
-                            <div className="description">{main.main.description}</div>
-                            <div className="line">{"_".repeat(lineRepeat)}</div>
+                            <h1 className="name">I am <span className="name__accent">{main.main.name}</span>.</h1>
+                            <p className="description">{main.main.description}</p>
+                            <p className="line" aria-hidden="true">{"_".repeat(lineRepeat)}</p>
                             <div className="socials">
                                 <div className="github">
                                     <a className="icon-button" href="https://github.com/SomexJames" target="_blank" rel="noreferrer"><FaGithub /></a>
@@ -39,10 +47,17 @@ const HomeSection = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="navArrow">
-                            <a className="icon-button icon-button--ghost" href="#portfolio"><RiArrowDownSLine /></a>
-                        </div>
                     </div>
+                </div>
+                <div className="navArrow">
+                    <a
+                        className="pill-button navArrow__button"
+                        href="#portfolio"
+                        onClick={(event) => handleNavClick(event, "#portfolio")}
+                        aria-label="Scroll to portfolio"
+                    >
+                        <RiArrowDownSLine />
+                    </a>
                 </div>
             </div>
         </section>
@@ -50,3 +65,4 @@ const HomeSection = () => {
 }
 
 export default HomeSection;
+
