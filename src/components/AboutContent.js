@@ -6,8 +6,8 @@ const AboutContent = (abt) => {
 
     return(
         <div className="about__content" id={abt.id}>
-            <div className="about__title">{abt.title}</div>
-            <div className="about__description"><p>{abt.description}</p></div>
+            <h3 className="about__title">{abt.title}</h3>
+            <p className="about__description">{abt.description}</p>
         </div>
     )
 }

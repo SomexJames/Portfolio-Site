@@ -5,6 +5,7 @@ import AboutSkills from "../components/AboutSkills";
 import about from "../Info/Info";
 import { RiArrowDownSLine } from "react-icons/ri";
 import ScreenSize from "../Hooks/ScreenSize";
+import { smoothScrollTo } from "../utils/smoothScroll";
 
 
 const AboutSection = () => {
@@ -21,34 +22,44 @@ const AboutSection = () => {
         lineRepeat = 30;
     }
 
+    const handleNavClick = (event, targetId) => {
+        event.preventDefault();
+        smoothScrollTo(targetId);
+    };
+
     return(
         <section id="about">
-            <div className="about__container">
-                <div className="section about">
-                    <div className="heading">
-                        <div className="section__title">About</div>
-                        <div className="line">{"_".repeat(lineRepeat)}</div>
-                    </div>
-                    <div className="section__about">
-                        <div className="about__content">
-                            <div className="about__title">Skills</div>
-                            <div className="about__skills">
-                                <AboutSkills />
-                            </div>
+            <div className="section__container">
+                    <div className="heading section-frame">
+                    <h2 className="section__title">About</h2>
+                    <p className="line" aria-hidden="true">{"_".repeat(lineRepeat)}</p>
+                </div>
+                <div className="section__about section__scroll section-frame">
+                    <div className="about__content">
+                        <h3 className="about__title">Skills</h3>
+                        <div className="about__skills">
+                            <AboutSkills />
                         </div>
-                        {
-                            about.about.map((abt) =>
-                                <AboutContent
-                                    id={abt.id}
-                                    title={abt.title}
-                                    description={abt.description}
-                                />
-                            )
-                        }
                     </div>
+                    {
+                        about.about.map((abt) =>
+                            <AboutContent
+                                id={abt.id}
+                                title={abt.title}
+                                description={abt.description}
+                            />
+                        )
+                    }
                 </div>
                 <div className="navArrow">
-                    <a href="#contact"><RiArrowDownSLine /></a>
+                    <a
+                        className="pill-button navArrow__button"
+                        href="#contact"
+                        onClick={(event) => handleNavClick(event, "#contact")}
+                        aria-label="Scroll to contact"
+                    >
+                        <RiArrowDownSLine />
+                    </a>
                 </div>
             </div>
         </section>

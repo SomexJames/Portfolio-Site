@@ -8,12 +8,14 @@
 .about__title {
     padding-bottom: 10px;
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: var(--font-size-2xl);
     letter-spacing: 0.5px;
+    margin: 0;
 }
 
 .about__description {
     font-weight: 300;
+    margin: 0;
 }
   
 @media (min-width: 1100px) {

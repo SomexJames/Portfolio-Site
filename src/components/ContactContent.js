@@ -37,10 +37,12 @@ const ContactContent = () => {
                     <textarea className="msg_input" placeholder="Message" name="message"></textarea>
                 </div>
                 <div className="cc_row_3">
-                    <input type="submit" className="submit_button" value="Send" />
+                    <button type="submit" className="pill-button submit_button"><p>Send</p></button>
                 </div>
                 <Popup className="submit-popup" open={open} closeOnDocumentClick onClose={closeModal}>
-                    <a className="submit__close" onClick={closeModal}><FaTimes /></a>
+                    <button type="button" className="submit__close icon-button icon-button--ghost" onClick={closeModal} aria-label="Close message">
+                        <FaTimes />
+                    </button>
                     <p>Thank you for your message,</p>
                     <p>I will get back to you as soon as possible!</p>
                 </Popup>

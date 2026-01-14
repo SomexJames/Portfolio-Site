@@ -1,18 +1,9 @@
-#contact {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    height: 90vh;
-}
-
 .section__contact {
     position: relative;
     display: flex;
     justify-content: space-between;
     margin-top: 0px;
     flex-direction: column;
-    max-height: 61vh;
-    overflow-y: scroll;
 }
 
 .contact__info {
@@ -24,18 +15,15 @@
 
 .contact__info > h4 {
     color: var(--light-color);
-    font-size: 1.8rem;
+    font-size: var(--font-size-4xl);
     letter-spacing: 0.2;
     font-weight: 400;
-    margin-top: 20px;
-    margin-bottom: 30px;
 }
 
 .contact__info > h5 {
     color: var(--light-color);
-    font-size: 1.5rem;
+    font-size: var(--font-size-3xl);
     font-weight: 300;
-    margin: 10px 0px;
 }
 
 .contact__info > p {
@@ -52,28 +40,13 @@
 }
 
 .contact__resume > a > svg {
-    width: 1.5em;
+    width: 1.4em;
 }
 
 .contact__resume > a > p > span {
     margin-left: -5px;
-    font-size: 0.85rem;
+    font-size: var(--font-size-sm);
     color: var(--blue);
-}
-
-.totop_arrow {
-    position: absolute;
-    bottom: 5vh;
-    transition: all ease-out 0.25s;
-}
-
-.totop_arrow > a > svg {
-    width: 3em;
-    color: var(--light-color);
-}
-
-.totop_arrow:hover {
-    transform: translateY(-10px);
 }
 
 @media (min-width: 768px) {
