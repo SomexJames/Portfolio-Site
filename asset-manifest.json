@@ -1,20 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.d34c5ba6.css",
-    "main.js": "/static/js/main.a02d2150.js",
+    "main.css": "/static/css/main.bb20ebf6.css",
+    "main.js": "/static/js/main.d77724c4.js",
     "static/media/p1bg.png": "/static/media/p1bg.c390ab20677736b4393c.png",
+    "static/media/segoe-ui-bold.ttf": "/static/media/segoe-ui-bold.e6c17ba4d59cc4a076e5.ttf",
+    "static/media/segoe-ui.ttf": "/static/media/segoe-ui.a732fcf595dcf938faef.ttf",
+    "static/media/segoe-ui-bolditalic.ttf": "/static/media/segoe-ui-bolditalic.03cdb62ac80c4681304a.ttf",
+    "static/media/segoe-ui-italic.ttf": "/static/media/segoe-ui-italic.0e421b2e578f6e7871fa.ttf",
     "static/media/macbook-keyboard.jpg": "/static/media/macbook-keyboard.08f94fd59923e5e7252b.jpg",
+    "static/media/segoe-ui-black.ttf": "/static/media/segoe-ui-black.c5d87c65438ea156ebc9.ttf",
     "static/media/p5bg.png": "/static/media/p5bg.43c4bd0d5fb8f90c25a5.png",
     "static/media/p4bg.png": "/static/media/p4bg.b8d0227d5bace863704e.png",
     "static/media/p2bg.png": "/static/media/p2bg.a3d94685dc07164755ef.png",
     "static/media/KANG_LOGO.png": "/static/media/KANG_LOGO.061c44847bf822ba92f6.png",
     "static/media/p3bg.png": "/static/media/p3bg.df48238720d4ea11b5fb.png",
     "index.html": "/index.html",
-    "main.d34c5ba6.css.map": "/static/css/main.d34c5ba6.css.map",
-    "main.a02d2150.js.map": "/static/js/main.a02d2150.js.map"
+    "main.bb20ebf6.css.map": "/static/css/main.bb20ebf6.css.map",
+    "main.d77724c4.js.map": "/static/js/main.d77724c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.d34c5ba6.css",
-    "static/js/main.a02d2150.js"
+    "static/css/main.bb20ebf6.css",
+    "static/js/main.d77724c4.js"
   ]
 }
